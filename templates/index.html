@@ -1,0 +1,232 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>𝕯𝖊𝖇𝖚𝖌 𝕲𝖗𝖔𝖈𝖊𝖗𝖞𝕾𝖙𝖔𝖗𝖊</title>
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:400' %}" rel="stylesheet" />    
+	<link href="{% static 'css/templatemo-style.css' %}" rel="stylesheet" />
+</head>
+<!--
+
+Simple House
+
+https://templatemo.com/tm-539-simple-house
+
+-->
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/gallery/s1.png' %}">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="{% static 'img/bug.png' %}" alt="Logo" class="tm-site-logo" /> 
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">DEBUG GROCERYSTORE</h1>
+								<h6 class="tm-site-description">FRESH AND HEALTHY</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="{% url 'home' %}" class="tm-nav-link active">Home</a></li>
+								{% if user.is_authenticated %}
+									<li class="tm-nav-li"><a href="{% url 'login' %}" class="tm-nav-link">Log in</a></li>
+								{% else %}
+
+									<li class="tm-nav-li"><a href="{% url 'login' %}" class="tm-nav-link">Log in </a></li>
+								{% endif %}
+								<li class="tm-nav-li"><a href="{% url 'register' %}" class="tm-nav-link">Register</a></li>
+								<li class="tm-nav-li"><a href="https://www.youtube.com/channel/UCdTvwwb4WHThizu32IljmFQ" class="tm-nav-link">Contact</a></li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">Welcome to Debug Groceries</h2>
+				<p class="col-12 text-center">You Can Get Fresh Vegetables and Groceries at Lower Price than Anywhere. Order Now</p>
+			</header>
+			
+			
+
+			<!-- Gallery -->
+			<div class="row tm-gallery">
+				<!-- gallery page 1 -->
+				<div id="tm-gallery-page-pizza" class="tm-gallery-page">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/tmt2.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Tomatoes/h4>
+								<p class="tm-gallery-description">In Stock</p>
+								<p class="tm-gallery-price">Rs.20/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/eggplant.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Eggplants</h4>
+								<p class="tm-gallery-description">In Stock</p>
+								<p class="tm-gallery-price">Rs.30/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/ct2.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Carrots</h4>
+								<p class="tm-gallery-description">In stock</p>
+								<p class="tm-gallery-price">Rs.40/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/onion.jfif' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Onions</h4>
+								<p class="tm-gallery-description">In stock</p>
+								<p class="tm-gallery-price">Rs.50/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/clf.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Cauliflower</h4>
+								<p class="tm-gallery-description">In stock</p>
+								<p class="tm-gallery-price">Rs.25/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/chilli.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Red Chilli</h4>
+								<p class="tm-gallery-description">In stock</p>
+								<p class="tm-gallery-price">Rs.250/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/pota.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Potatoes</h4>
+								<p class="tm-gallery-description">In stock</p>
+								<p class="tm-gallery-price">Rs.30/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/c.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Coriander</h4>
+								<p class="tm-gallery-description">In stock</p>
+								<p class="tm-gallery-price">Rs.30/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/chicken.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Chicken</h4>
+								<p class="tm-gallery-description">In Stock</p>
+								<p class="tm-gallery-price">Rs.200/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/frw.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Fish</h4>
+								<p class="tm-gallery-description">In Stock</p>
+								<p class="tm-gallery-price">Rs.300/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/prawn.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Prawns</h4>
+								<p class="tm-gallery-description">In Stock</p>
+								<p class="tm-gallery-price">Rs.300/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{% static 'img/gallery/mutton.png' %}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Mutton</h4>
+								<p class="tm-gallery-description">In Stock</p>
+								<p class="tm-gallery-price">Rs.500/kg</p>
+							</figcaption>
+						</figure>
+					</article>
+				</div> <!-- gallery page 1 -->
+				
+				
+			
+			<div class="tm-section tm-container-inner">
+				<div class="row">
+					<div class="col-md-6">
+						<figure class="tm-description-figure">
+							<img src="{% static 'img/img-01.jpg' %}" alt="Image" class="img-fluid" />
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<div class="tm-description-box"> 
+							<h4 class="tm-gallery-title">Health Tip:</h4>
+							<p class="tm-mb-45">Avocados tend to be rich in fiber — about 7% by weight, which is very high compared to most other foods. Fiber may have important benefits for weight loss and metabolic health. <a rel="nofollow" href="https://www.youtube.com/channel/UCdTvwwb4WHThizu32IljmFQ">Talk to us</a> for additional help and suggestions. Thank you.</p>
+							<a href="https://www.youtube.com/channel/UCdTvwwb4WHThizu32IljmFQ" class="tm-btn tm-btn-default tm-right">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; 2021 Debug Dude
+            
+            | Design: <a rel="nofollow" href="https://www.youtube.com/channel/UCdTvwwb4WHThizu32IljmFQ">Debug Dude</a></p>
+		</footer>
+	</div>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script>
+		$(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</body>
+</html>
